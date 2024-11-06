@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.wtg'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation group: 'com.microsoft.cognitiveservices.speech', name: 'client-sdk', version: "1.41.1", ext: "jar"
+}
+
+test {
+    useJUnitPlatform()
+}
